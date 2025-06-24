@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        BRANCH: main
     volumes:
       - ./agent-zero:/a0
     ports:
