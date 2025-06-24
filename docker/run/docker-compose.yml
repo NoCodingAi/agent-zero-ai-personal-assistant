@@ -1,7 +1,9 @@
 services:
   agent-zero:
     container_name: agent-zero
-    image: frdel/agent-zero:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./agent-zero:/a0
     ports:
